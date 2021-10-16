@@ -5,11 +5,11 @@ public class Store {
     private int stock;
 
     public String getProduct() {
-        return this.product;
+        return product;
     }
 
     public int getStock() {
-        return this.stock;
+        return stock;
     }
 
     public Store(String product) {
