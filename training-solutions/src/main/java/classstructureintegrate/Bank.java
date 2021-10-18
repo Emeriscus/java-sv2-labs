@@ -17,7 +17,6 @@ public class Bank {
 
         BankAccount bankAccount = new BankAccount(accountNumber, owner, balance);
 
-        /* BankAccount bankAccount = new BankAccount("114-25", "Pocsai", 100000); */
         System.out.println();
         System.out.print("A bankszámla adatai: ");
         System.out.println(bankAccount.getInfo());
