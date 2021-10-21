@@ -23,6 +23,7 @@ public class Investment {
 
     public double close(int days){
         double b = active ? (fund + getYield(days)) * (1.0 - cost/100) : 0;
+        active = false;
         return b;
     }
 

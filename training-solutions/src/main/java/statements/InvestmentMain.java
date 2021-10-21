@@ -26,5 +26,10 @@ public class InvestmentMain {
         int finalDay = scanner.nextInt();
         System.out.println("A kivett összeg " + finalDay + " nap után: " + investment.close(finalDay));
 
+        System.out.println("Hány nap múlva veszi ki a befektetést: ");
+        finalDay = scanner.nextInt();
+        System.out.println("A kivett összeg " + finalDay + " nap után: " + investment.close(finalDay));
+
+
     }
 }
