@@ -34,12 +34,15 @@ public class IntroControl {
         }
     }
 
-    /*
-    ez még hiányzik:
     public int calculateConsumption(int prev, int next) {
-        if
+        if (next > prev) {
+            int result = next - prev;
+            return result;
+        } else {
+            int result = 10000 - prev + next;
+            return result;
+        }
     }
-    */
 
     public void printNumbers(int max) {
         for (int i = 0; i <= max ; i++) {

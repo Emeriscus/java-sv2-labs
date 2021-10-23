@@ -19,9 +19,8 @@ public class IntroControlMain {
         System.out.println(introControl.calculateBonus(999_999));
         System.out.println(introControl.calculateBonus(1_000_001));
 
-        /* ez még hiányzik:
-        introControl.calculateConsumption();
-         */
+        System.out.println(introControl.calculateConsumption(5111, 9999));
+        System.out.println(introControl.calculateConsumption(5000, 4000));
 
         introControl.printNumbers(10);
 
