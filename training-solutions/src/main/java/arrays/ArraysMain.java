@@ -38,11 +38,17 @@ public class ArraysMain {
     }
 
     public boolean wonLottery(int[] bet, int[] win) {
+//       int [] originalBet = bet;
+//       int [] originalWin = win;
+
         int[] betAssist = bet;
         int[] winAssist = win;
 
         Arrays.sort(betAssist);
         Arrays.sort(winAssist);
+
+//        bet = originalBet;
+//        win = originalWin;
 
         return Arrays.equals(betAssist, winAssist);
     }
@@ -71,8 +77,8 @@ public class ArraysMain {
         int[] bet = {6, 52, 89, 3, 21};
         int[] win = {52, 3, 21, 6, 89};
         System.out.println(arraysMain.wonLottery(bet, win));
-        System.out.println(Arrays.toString(bet));
-        System.out.println(Arrays.toString(win));
+//        System.out.println(Arrays.toString(bet));
+//        System.out.println(Arrays.toString(win));
 
     }
 }
