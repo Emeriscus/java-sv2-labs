@@ -18,7 +18,7 @@ public class Digits {
         for (int i = 0; i < text.length(); i++) {
             if (Character.isDigit(text.charAt(i)) ) {
                 digits.add(Integer.valueOf(String.valueOf(text.charAt(i))));
-//                digits.add(Integer.parseInt(Character.toString(text.charAt(i)))); a solutins megoldása
+//                digits.add(Integer.parseInt(Character.toString(text.charAt(i)))); a solutions megoldása
             }
         }
         System.out.println(digits);
