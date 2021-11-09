@@ -15,16 +15,17 @@ public class ArraysMain {
         int[][] multiple = new int[size][size];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                multiple[i][j] = (i+1) * (j+1);
+                multiple[i][j] = (i + 1) * (j + 1);
             }
         }
-    return Arrays.deepToString(multiple);
+        return Arrays.deepToString(multiple);
     }
 
     public boolean sameTempValues(double[] day, double[] anotherDay) {
         return Arrays.equals(day, anotherDay);
     }
-    public int min (int dayLength, int anotherDayLength) {
+
+    public int min(int dayLength, int anotherDayLength) {
         int min;
         if (dayLength > anotherDayLength) {
             min = anotherDayLength;
@@ -33,22 +34,18 @@ public class ArraysMain {
         }
         return min;
     }
+
     public boolean sameTempValuesDaylight(double[] day, double[] anotherDay) {
         return Arrays.equals(Arrays.copyOfRange(day, 0, min(day.length, anotherDay.length)), Arrays.copyOfRange(anotherDay, 0, min(day.length, anotherDay.length)));
     }
 
     public boolean wonLottery(int[] bet, int[] win) {
-//       int [] originalBet = bet;
-//       int [] originalWin = win;
 
-        int[] betAssist = bet;
-        int[] winAssist = win;
+        int[] betAssist = Arrays.copyOf(bet, bet.length);
+        int[] winAssist = Arrays.copyOf(win, win.length);
 
         Arrays.sort(betAssist);
         Arrays.sort(winAssist);
-
-//        bet = originalBet;
-//        win = originalWin;
 
         return Arrays.equals(betAssist, winAssist);
     }
