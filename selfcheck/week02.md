@@ -24,7 +24,7 @@ a bonyolultabb típusokat fogjátok alapszinten megismerni.
 * [x] [Dátum és időkezelés alapok](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709798-datum-es-idokezeles-alapok)
 * [x] Dátum és időkezelés alapok gyakorlati feladat
 * [x] [Bevezetés a vezérlési szerkezetekbe](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709782-bevezetes-a-vezerlesi-szerkezetekbe)
-* [ ] Bevezetés a vezérlési szerkezetekbe gyakorlati feladat
+* [x] Bevezetés a vezérlési szerkezetekbe gyakorlati feladat
 
 ## Bonyolultabb típusok
 
@@ -35,7 +35,7 @@ a bonyolultabb típusokat fogjátok alapszinten megismerni.
 * [x] [Tömbök tömbje](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709631-tombok-tombje)
 * [x] Tömbök tömbje gyakorlati feladat
 * [x] [Tömbök kezelése](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709801-tombok-kezelese)
-* [ ] Tömbök kezelése gyakorlati feladat
+* [x] Tömbök kezelése gyakorlati feladat
 * [x] [Lista](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709852-lista)
 * [x] Lista gyakorlati feladat
 * [x] [Lista létrehozása](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993631-lista-letrehozasa)
