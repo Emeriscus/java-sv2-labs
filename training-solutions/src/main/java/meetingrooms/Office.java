@@ -15,37 +15,37 @@ public class Office {
         meetingRooms.add(meetingRoom);
     }
 
+    public void returnToMenu() {
+        System.out.println("Tovább bármelyik billentyűvel");
+        scanner.nextLine();
+    }
 
     public void printNames() {
         for (MeetingRoom actual : meetingRooms) {
             System.out.println(actual.toString());
         }
-        System.out.println("Tovább bármelyik billentyűvel");
-        scanner.nextLine();
+        returnToMenu();
     }
 
     public void printNamesReverse() {
         for (int i = meetingRooms.size() - 1; i >= 0; i--) {
             System.out.println(meetingRooms.get(i).getName());
         }
-        System.out.println("Tovább bármelyik billentyűvel");
-        scanner.nextLine();
+        returnToMenu();
     }
 
     public void printEvenNames() {
         for (int i = 1; i < meetingRooms.size(); i += 2) {
             System.out.println(meetingRooms.get(i).getName());
         }
-        System.out.println("Tovább bármelyik billentyűvel");
-        scanner.nextLine();
+        returnToMenu();
     }
 
     public void printAreas() {
         for (MeetingRoom actual : meetingRooms) {
             System.out.println(actual.toString() + ", területe: " + actual.getArea() + " m2");
         }
-        System.out.println("Tovább bármelyik billentyűvel");
-        scanner.nextLine();
+        returnToMenu();
 
     }
 
@@ -55,19 +55,16 @@ public class Office {
                 System.out.println(actual.toString() + ", területe: " + actual.getArea() + " m2");
             }
         }
-        System.out.println("Tovább bármelyik billentyűvel");
-        scanner.nextLine();
+        returnToMenu();
     }
 
     public void printMeetingRoomsContains(String part) {
-        List<MeetingRoom> result = new ArrayList<>();
         for (MeetingRoom actual : meetingRooms) {
             if (actual.getName().toLowerCase().contains(part.toLowerCase())) {
                 System.out.println(actual.toString() + ", területe: " + actual.getArea() + " m2");
             }
         }
-        System.out.println("Tovább bármelyik billentyűvel");
-        scanner.nextLine();
+        returnToMenu();
     }
 
     public void areasLargerThan(int area) {
@@ -76,18 +73,10 @@ public class Office {
                 System.out.println(actual.toString() + ", területe: " + actual.getArea() + " m2");
             }
         }
-        System.out.println("Tovább bármelyik billentyűvel");
-        scanner.nextLine();
+        returnToMenu();
     }
 
     public List<MeetingRoom> getMeetingRooms() {
         return meetingRooms;
-    }
-
-    @Override
-    public String toString() {
-        return "Office{" +
-                "meetingRooms=" + meetingRooms +
-                '}';
     }
 }

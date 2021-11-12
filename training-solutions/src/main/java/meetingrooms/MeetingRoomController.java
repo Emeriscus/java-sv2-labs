@@ -84,15 +84,5 @@ public class MeetingRoomController {
         MeetingRoomController meetingRoomController = new MeetingRoomController();
 
         meetingRoomController.runMenu();
-
-        System.out.println(meetingRoomController.office.getMeetingRooms());
-        System.out.println(meetingRoomController.office.getMeetingRooms().toString());
-        System.out.println();
-        System.out.println(meetingRoomController.office);
-        System.out.println(meetingRoomController.office.toString());
-        System.out.println();
-        System.out.println(meetingRoomController.office.getMeetingRooms().get(0).getName());
-
-
     }
 }

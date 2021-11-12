@@ -11,6 +11,7 @@ public class MeetingRoom {
         this.length = length;
         this.width = width;
     }
+
     public int getArea() {
         return length * width;
     }
@@ -41,7 +42,7 @@ public class MeetingRoom {
 
     @Override
     public String toString() {
-        return  "név: " + name + ", hossz: " + length +
+        return "név: " + name + ", hossz: " + length +
                 "m, szélesség: " + width + "m";
     }
 }
