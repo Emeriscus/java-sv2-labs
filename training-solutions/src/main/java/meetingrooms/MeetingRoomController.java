@@ -58,13 +58,20 @@ public class MeetingRoomController {
                     office.printAreas();
                     break;
                 case 6:
-                    office.printMeetingRoomsWithName();
+                    System.out.println("Kérem a tárgyaló nevét:");
+                    scanner.nextLine();
+                    office.printMeetingRoomsWithName(scanner.nextLine());
                     break;
                 case 7:
-                    office.printMeetingRoomsContains();
+                    System.out.println("Kérem a névtöredéket:");
+                    scanner.nextLine();
+                    office.printMeetingRoomsContains(scanner.nextLine());
                     break;
                 case 8:
-                    office.areasLargerThan();
+                    System.out.println("Kérem azt a területet m2-ben, aminél a nagyobb területű tárgyalókat listázni fogom:");
+                    scanner.nextLine();
+                    office.areasLargerThan(scanner.nextInt());
+                    scanner.nextLine();
                     break;
                 case 9:
                 default:
