@@ -10,8 +10,8 @@ public class CalculatorMain {
         Scanner scanner = new Scanner(System.in);
         CalculatorMain calculator = new CalculatorMain();
         try {
-            System.out.println("A művelet eredménye: " + calculator.doOperation(calculator.getNumber(),
-                    calculator.getAnotherNumber(), calculator.getOperation()));
+            System.out.print("A művelet eredménye: ");
+            calculator.doOperation(calculator.getNumber(), calculator.getAnotherNumber(), calculator.getOperation());
         } catch (ArithmeticException ae){
             System.out.println("Nullával nem lehet osztani!");
         }
@@ -27,6 +27,7 @@ public class CalculatorMain {
 
         } catch (InputMismatchException ime) {
             System.out.println("Ez nem egy egész szám!");
+            System.out.println("A szám nulla lesz!");
         }
         return number;
     }
@@ -41,6 +42,7 @@ public class CalculatorMain {
 
         } catch (InputMismatchException ime) {
             System.out.println("Ez nem egy egész szám!");
+            System.out.println("A szám nulla lesz!");
         }
         return anotherNumber;
     }
@@ -57,22 +59,20 @@ public class CalculatorMain {
         return operation;
     }
 
-    public int doOperation(int number, int anothernumber, String operation) {
-        int result = 0;
+    public void doOperation(int number, int anothernumber, String operation) {
         switch (operation) {
             case "+":
-                new Calculator().addNumbers(number, anothernumber);
+                System.out.println(new Calculator().addNumbers(number, anothernumber));
                 break;
             case "-":
-                new Calculator().extractionNumbers(number, anothernumber);
+                System.out.println(new Calculator().extractionNumbers(number, anothernumber));
                 break;
             case "/":
-                new Calculator().divideNumbers(number, anothernumber);
+                System.out.println(new Calculator().divideNumbers(number, anothernumber));
                 break;
             case "*":
-                new Calculator().multipleNumbers(number, anothernumber);
+                System.out.println(new Calculator().multipleNumbers(number, anothernumber));
                 break;
         }
-        return result;
     }
 }
