@@ -15,7 +15,7 @@ public class Office {
         meetingRooms.add(meetingRoom);
     }
 
-    public void returnToMenu() {
+    private void returnToMenu() {
         System.out.println("Tovább bármelyik billentyűvel");
         scanner.nextLine();
     }
