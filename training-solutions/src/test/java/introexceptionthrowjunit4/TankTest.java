@@ -11,13 +11,13 @@ public class TankTest {
     Tank tank = new Tank();
 
     @Test
-    public void tankTest(){
+    public void tankTest() {
         tank.modifyAngle(80);
         assertEquals(80, tank.getAngle());
     }
 
-    @Test (expected = IllegalArgumentException.class)
-    public void tankWithBadAngleTest(){
+    @Test(expected = IllegalArgumentException.class)
+    public void tankWithBadAngleTest() {
         tank.modifyAngle(81);
     }
 
@@ -25,7 +25,7 @@ public class TankTest {
     public ExpectedException e = ExpectedException.none();
 
     @Test
-    public void tankWithAnotherBadAngleTest(){
+    public void tankWithAnotherBadAngleTest() {
 
         e.expect(IllegalArgumentException.class);
         e.expectMessage("A tank csöve nem tud ennyire elfordulni!");
@@ -33,10 +33,10 @@ public class TankTest {
     }
 
     @Test
-    public void tankWithBrandNewAnotherBadAngleTest(){
+    public void tankWithBrandNewAnotherBadAngleTest() {
         IllegalArgumentException e = assertThrows(IllegalArgumentException.class, () -> tank.modifyAngle(-81));
 
         assertEquals("A tank csöve nem tud ennyire elfordulni!", e.getMessage());
 
-        }
+    }
 }
