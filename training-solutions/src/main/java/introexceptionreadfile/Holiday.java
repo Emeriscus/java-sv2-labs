@@ -10,7 +10,7 @@ public class Holiday {
     public static void main(String[] args) {
 
         try {
-            List<String> holidayStuffs = Files.readAllLines(Paths.get("holiday_.txt"));
+            List<String> holidayStuffs = Files.readAllLines(Paths.get("holiday.txt"));
             System.out.println(holidayStuffs);
         } catch (IOException ioe) {
             System.out.println("Nem létező fájl, vagy útvonal.");
