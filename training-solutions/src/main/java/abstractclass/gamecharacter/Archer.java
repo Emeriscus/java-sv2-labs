@@ -4,14 +4,17 @@ import java.util.Random;
 
 public class Archer extends Character {
 
-    private int numberOfArrow = 100;
+    private static final int MAX_ARROWS = 100;
+    private static final int MAX_SECONDARY_DAMAGE = 5;
+    private int numberOfArrow;
 
     public Archer(Point position, Random rnd) {
         super(position, rnd);
+        this.numberOfArrow = MAX_ARROWS;
     }
 
     private int getActualSecondaryDamage() {
-        return getRnd().nextInt(1, 6);
+        return getRnd().nextInt(MAX_SECONDARY_DAMAGE) + 1;
     }
 
     private void shootingAnArrow(Character enemy) {

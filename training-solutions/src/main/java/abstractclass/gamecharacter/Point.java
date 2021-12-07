@@ -1,9 +1,9 @@
 package abstractclass.gamecharacter;
 
-public class Point {
+public final class Point {
 
-    private long x;
-    private long y;
+    private final long x;
+    private final long y;
 
     public Point(long x, long y) {
         this.x = x;
@@ -20,6 +20,6 @@ public class Point {
 
     public long distance(Point anotherPoint) {
 
-        return (long) Math.sqrt((x - anotherPoint.getX()) * (x - anotherPoint.getX()) + (y - anotherPoint.getY()) * (y - anotherPoint.getY()));
+        return (long) Math.sqrt(Math.pow((x - anotherPoint.getX()), 2) + Math.pow((y - anotherPoint.getY()), 2));
     }
 }
