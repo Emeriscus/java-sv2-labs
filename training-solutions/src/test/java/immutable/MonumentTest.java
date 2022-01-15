@@ -43,7 +43,7 @@ class MonumentTest {
     @Test
     void createMonumentInvalidDateOfRegistryTest() {
         IllegalArgumentException expected = assertThrows(IllegalArgumentException.class,
-                () -> new Monument("Car", "Tipo", LocalDate.of(2021, 11, 30), "1234"));
+                () -> new Monument("Car", "Tipo", LocalDate.now().plusDays(1), "1234"));
         assertEquals("The date of registry cannot be after now!", expected.getMessage());
     }
 }
