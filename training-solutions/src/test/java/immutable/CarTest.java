@@ -2,6 +2,8 @@ package immutable;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CarTest {
@@ -11,7 +13,7 @@ class CarTest {
 
         Car car = new Car("BMW", "E6", 2021);
 
-        assertEquals(2021, car.getYearOfProduct());
+        assertEquals(LocalDate.now().getYear(), car.getYearOfProduct());
         assertEquals("BMW", car.getBrand());
         assertEquals("E6", car.getType());
     }
@@ -28,7 +30,7 @@ class CarTest {
         assertEquals("The brand is not valid!", exception2.getMessage());
 
         IllegalArgumentException exception3 = assertThrows(IllegalArgumentException.class,
-                () -> new Car("BMW", "E4", 2022));
+                () -> new Car("BMW", "E4", LocalDate.now().getYear() + 1));
         assertEquals("Invalid year of product!", exception3.getMessage());
     }
 }
