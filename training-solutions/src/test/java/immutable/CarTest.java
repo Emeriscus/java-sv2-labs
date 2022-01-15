@@ -11,7 +11,7 @@ class CarTest {
     @Test
     void createValidCarTest() {
 
-        Car car = new Car("BMW", "E6", 2021);
+        Car car = new Car("BMW", "E6", LocalDate.now().getYear());
 
         assertEquals(LocalDate.now().getYear(), car.getYearOfProduct());
         assertEquals("BMW", car.getBrand());
