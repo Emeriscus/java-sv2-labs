@@ -1,6 +1,7 @@
 package searching;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class LostProperty implements Comparable<LostProperty> {
 
@@ -29,6 +30,19 @@ public class LostProperty implements Comparable<LostProperty> {
 
     public LocalDate getDateOfFound() {
         return dateOfFound;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LostProperty that = (LostProperty) o;
+        return description.equals(that.description) && dateOfFound.equals(that.dateOfFound);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(description, dateOfFound);
     }
 
     @Override
