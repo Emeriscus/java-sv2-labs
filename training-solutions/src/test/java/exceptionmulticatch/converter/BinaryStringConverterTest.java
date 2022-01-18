@@ -13,10 +13,6 @@ class BinaryStringConverterTest {
 
         Exception ex = assertThrows(IllegalArgumentException.class, () -> converter.binaryStringToBooleanArray(binaryString));
         assertEquals("Binary string is not valid.", ex.getMessage());
-
-        String binaryString2 = null;
-        Exception ex2 = assertThrows(NullPointerException.class, () -> converter.binaryStringToBooleanArray(binaryString2));
-        assertEquals("Binary string is not valid.", ex.getMessage());
     }
 
     @Test
