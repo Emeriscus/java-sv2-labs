@@ -5,7 +5,7 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 ## Belső osztályok
 
 * [x] [Belső osztályok videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/29778400-belso-osztalyok)
-* [ ] Belső osztályok gyakorlati feladat
+* [x] Belső osztályok gyakorlati feladat
 
 ## Generikusok
 
