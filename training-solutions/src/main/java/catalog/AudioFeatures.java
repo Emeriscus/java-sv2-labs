@@ -31,23 +31,6 @@ public class AudioFeatures implements Feature {
         this.composer = composer;
     }
 
-    private boolean isAudioFeaturesValid(String title, int length, List<String> performers) {
-        boolean result = true;
-        if (Validators.isBlank(title)) {
-            result = false;
-            throw new IllegalArgumentException("Empty title");
-        }
-        if (length <= 0) {
-            result = false;
-            throw new IllegalArgumentException("invalid page number");
-        }
-        if (Validators.isEmpty(performers)) {
-            result = false;
-            throw new IllegalArgumentException("Empty list");
-        }
-        return result;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -64,5 +47,19 @@ public class AudioFeatures implements Feature {
 
     public List<String> getComposer() {
         return composer;
+    }
+
+    private boolean isAudioFeaturesValid(String title, int length, List<String> performers) {
+
+        if (Validators.isBlank(title)) {
+            throw new IllegalArgumentException("Empty title");
+        }
+        if (length <= 0) {
+            throw new IllegalArgumentException("invalid page number");
+        }
+        if (Validators.isEmpty(performers)) {
+            throw new IllegalArgumentException("Empty list");
+        }
+        return true;
     }
 }

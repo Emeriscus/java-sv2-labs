@@ -2,7 +2,7 @@ package catalog;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import java.util.List;
 
 import static catalog.Validators.isBlank;
 import static catalog.Validators.isEmpty;
@@ -24,8 +24,8 @@ public class ValidatorsTest {
     @Test
     public void testIsEmpty() {
         assertTrue(isEmpty(null));
-        assertTrue(isEmpty(Arrays.asList()));
-        assertFalse(isEmpty(Arrays.asList("aaa")));
-        assertFalse(isEmpty(Arrays.asList("aaa", "bbb")));
+        assertTrue(isEmpty(List.of()));
+        assertFalse(isEmpty(List.of("aaa")));
+        assertFalse(isEmpty(List.of("aaa", "bbb")));
     }
 }
